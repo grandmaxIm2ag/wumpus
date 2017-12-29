@@ -7,5 +7,5 @@
 ##  Run
 
 ##  Test
-	src/test/test
+	bin/test
 

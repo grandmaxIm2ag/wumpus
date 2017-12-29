@@ -1,5 +1,6 @@
 #include "include/square.h"
 #include <cstdlib>
+#include <iostream>
 using namespace std;
 
 Square::Square(int x, int y, int v[5])
@@ -10,8 +11,6 @@ Square::Square(int x, int y, int v[5])
     for(int i=0; i<5; i++) {
         Square::vector[i] = v[i];
     }
-    free(v);
-    Square::vector=v;
 }
 
 int * Square::getVector()
@@ -29,7 +28,27 @@ int Square::getY()
     return Square::y;
 }
 
-Square::~Square()
+int Square::wumpus()
 {
-    free(Square::vector);
+    return Square::vector[WUMPUS];
+}
+
+int Square::odor()
+{
+    return Square::vector[ODOR];
+}
+
+int Square::breeze()
+{
+    return Square::vector[BREEZE];
+}
+
+int Square::well()
+{
+    return Square::vector[WELL];
+}
+
+int Square::flash()
+{
+    return Square::vector[FLASH];
 }
