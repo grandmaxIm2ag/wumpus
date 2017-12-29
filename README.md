@@ -1,4 +1,4 @@
-#wumpus
+# wumpus
 
 ##  Compilation
 	cmake .
